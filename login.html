@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPulse - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+
+            <img src="logo.png" alt="CampusPulse Logo" class="logo">
+
+            <h1>CampusPulse</h1>
+
+            <h2>University Event Portal</h2>
+
+            <p>
+                Connecting affiliated colleges through workshops,
+                hackathons, sports, cultural events, and academic opportunities.
+            </p>
+
+        </div>
+        <div class="form-section">
+
+            <form id="loginForm" class="form-card">
+
+                <h2>Welcome Back</h2>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required>
+
+                    <span onclick="togglePassword('loginPassword')">
+                        👁️
+                    </span>
+
+                </div>
+                <p id="message"></p>
+
+                <button type="submit">
+                    Login
+                </button>
+
+                <p>
+                    Don't have an account?
+                    <a href="signup.html">Sign Up</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+<div id="notification" class="notification"></div>
+</body>
+</html>

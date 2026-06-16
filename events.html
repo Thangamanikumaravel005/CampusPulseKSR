@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPulse - Events</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+
+<div class="events-container">
+    <header class="event-header">
+
+        <div class="header-content">
+            <h1>🎓 CampusPulse</h1>
+            <p>Explore Upcoming Campus Events</p>
+        </div>
+
+    </header>
+    <section class="events-section">
+
+        <div class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search Event Name">
+
+            <input
+                type="date"
+                id="dateFilter">
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Hackathon">Hackathon</option>
+                <option value="Sports">Sports</option>
+                <option value="Cultural">Cultural</option>
+            </select>
+
+        </div>
+
+        <!-- Event Cards -->
+        <div id="eventsList" class="events-grid"></div>
+
+    </section>
+
+</div>
+<div id="popup" class="popup">
+
+    <div class="popup-content">
+
+        <span id="closeBtn">&times;</span>
+
+        <h2 id="popupTitle"></h2>
+
+        <p id="popupDate"></p>
+
+        <p id="popupVenue"></p>
+
+        <p id="popupDescription"></p>
+
+    </div>
+
+</div>
+<div id="registerPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span id="closeRegisterBtn">&times;</span>
+
+        <h2>Event Registration</h2>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                placeholder="Enter Your Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Enter Your Email"
+                required>
+
+            <input
+                type="text"
+                placeholder="Department"
+                required>
+
+            <button type="submit">
+                Submit Registration
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<footer class="event-footer">
+
+    <div class="footer-content">
+
+        <p>© 2026 CampusPulse | University Event Portal</p>
+    </div>
+
+</footer>
+
+<script src="events.js"></script>
+<div class="page-navigation">
+
+    <a href="home.html">
+        <button>← Previous</button>
+    </a>
+
+    <a href="workshops.html">
+        <button>Next →</button>
+    </a>
+
+</div>
+<div id="notification" class="notification"></div>
+</body>
+</html>

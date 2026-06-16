@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusPulse - Home</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <nav>
+    <div class="logo-section">
+
+        <img src="logo.png"
+             alt="CampusPulse Logo"
+             class="nav-logo">
+
+        <h2>CampusPulse</h2>
+
+    </div>
+    <ul class="nav-links">
+
+        <li>
+            <a href="home.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="events.html">
+                Events
+            </a>
+        </li>
+
+        <li>
+            <a href="workshops.html">
+                Workshops
+            </a>
+        </li>
+
+        <li>
+            <a href="sports.html">
+                Sports
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+    </ul>
+    <div class="right-section">
+        <button id="themeToggle"
+                class="theme-btn">
+
+            🌙
+
+        </button>
+        <div class="user-menu">
+
+            <div id="userBtn"
+                 class="user-info">
+
+                👤 <span id="userName">
+                    Guest
+                </span>
+
+            </div>
+            <div id="userDropdown"
+                 class="dropdown">
+
+                <h4>
+                    Profile
+                </h4>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="profileName"></span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="profileEmail"></span>
+                </p>
+
+                <button id="logoutBtn">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to CampusPulse</h1>
+
+            <p>
+                <p>
+    Welcome to CampusPulse, your one-stop platform for
+    exploring university-wide events and opportunities.
+    Participate in innovative workshops, exciting
+    hackathons, sports competitions, cultural celebrations,
+    seminars, and academic programs. Stay informed about
+    upcoming events, register seamlessly, showcase your
+    talents, build valuable connections, and enhance your
+    personal and professional growth through a vibrant
+    campus community.
+</p>
+            </p>
+
+            <a href="events.html">
+
+                <button>
+
+                    Explore Events
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+    <section class="categories">
+
+        <h2>Event Categories</h2>
+
+        <div class="card-container">
+
+            <div class="card">💻 Hackathons</div>
+
+            <div class="card">📚 Workshops</div>
+
+            <div class="card">🏆 Sports</div>
+
+            <div class="card">🎭 Cultural</div>
+
+            <div class="card">🎤 Seminars</div>
+
+            <div class="card">🔬 Symposiums</div>
+
+        </div>
+
+    </section>
+
+    <section class="event-day">
+
+        <h2>🌟 Event of the Day</h2><br>
+
+
+        <div class="event-box">
+
+            <h3 id="eventName">
+                AI & Machine Learning Workshop
+            </h3>
+
+        </div>
+
+    </section>
+
+<section class="upcoming">
+
+    <h2>Upcoming Events</h2>
+    <div class="event-card">
+
+        <h3>AI Workshop</h3>
+
+        <p>Date: 25 June 2026</p>
+
+        <div class="btn-group">
+
+            <button onclick="showDetails('ai')">
+                Details
+            </button>
+
+            <button onclick="showRegister('ai')">
+                Register
+            </button>
+
+        </div>
+
+        <div id="ai-details" class="hidden-box">
+
+            <h4>AI Workshop Details</h4>
+
+            <p>
+                Learn Artificial Intelligence,
+                Machine Learning, and ChatGPT tools.
+            </p>
+
+            <p>
+                Venue: Seminar Hall
+            </p>
+
+            <p>
+                Time: 10:00 AM
+            </p>
+
+        </div>
+
+        <div id="ai-register" class="hidden-box">
+
+            <h4>Registration Form</h4>
+    <input type="text"
+           placeholder="Enter Name"
+           required>
+
+    <input type="email"
+           placeholder="Enter Email"
+           required>
+    <input
+                type="text"
+                placeholder="Department"
+                required>
+
+    <button
+type="button"
+onclick="registerEvent(
+    'AI Workshop',
+    '25 June 2026',
+    'Workshop',
+    'Seminar Hall'
+)">
+    Register Event
+</button>
+</form>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="event-card">
+
+        <h3>Hackathon 2026</h3>
+
+        <p>Date: 30 June 2026</p>
+
+        <div class="btn-group">
+
+            <button onclick="showDetails('hackathon')">
+                Details
+            </button>
+
+            <button onclick="showRegister('hackathon')">
+                Register
+            </button>
+
+        </div>
+
+        <div id="hackathon-details" class="hidden-box">
+
+            <h4>Hackathon Details</h4>
+
+            <p>
+                24-Hour Coding Challenge with exciting prizes.
+            </p>
+
+            <p>
+                Venue: Innovation Lab
+            </p>
+
+            <p>
+                Time: 09:00 AM
+            </p>
+
+        </div>
+
+        <div id="hackathon-register" class="hidden-box">
+
+            <h4>Registration Form</h4>
+
+    <input type="text"
+           placeholder="Enter Name"
+           required>
+
+    <input type="email"
+           placeholder="Enter Email"
+           required>
+
+    <button
+type="button"
+onclick="registerEvent(
+    'Hackathon 2026',
+    '30 June 2026',
+    'Hackathon',
+    'Innovation Lab'
+)">
+    Register Event
+</button>
+
+</form>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="event-card">
+
+        <h3>Sports Meet</h3>
+
+        <p>Date: 05 July 2026</p>
+
+        <div class="btn-group">
+
+            <button onclick="showDetails('sports')">
+                Details
+            </button>
+
+            <button onclick="showRegister('sports')">
+                Register
+            </button>
+
+        </div>
+
+        <div id="sports-details" class="hidden-box">
+
+            <h4>Sports Meet Details</h4>
+
+            <p>
+                Participate in Cricket, Football,
+                Volleyball and Athletics.
+            </p>
+
+            <p>
+                Venue: College Ground
+            </p>
+
+            <p>
+                Time: 08:00 AM
+            </p>
+
+        </div>
+
+        <div id="sports-register" class="hidden-box">
+
+            <h4>Registration Form</h4>
+    <input type="text"
+           placeholder="Enter Name"
+           required>
+
+    <input type="email"
+           placeholder="Enter Email"
+           required>
+
+    <button
+type="button"
+onclick="registerEvent(
+    'Sports Meet',
+    '05 July 2026',
+    'Sports',
+    'College Ground'
+)">
+    Register Event
+</button>
+
+</form>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="stats">
+
+        <div class="stat">
+
+            <h2>500+</h2>
+
+            <p>Students</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>50+</h2>
+
+            <p>Events</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>20+</h2>
+
+            <p>Colleges</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>100+</h2>
+
+            <p>Certificates</p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 CampusPulse |
+            University Event Portal
+        </p>
+
+    </footer>
+
+    <script src="home.js"></script>
+<div class="page-navigation">
+
+    <a href="events.html">
+        <button>Next →</button>
+    </a>
+
+</div>
+<div id="notification" class="notification"></div>
+</body>
+
+</html>

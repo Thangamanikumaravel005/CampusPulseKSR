@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusPulse - Sports</title>
+
+    <link rel="stylesheet" href="sports.css">
+</head>
+
+<body>
+
+<div class="events-container">
+
+    <header class="event-header">
+
+        <div class="header-content">
+
+            <h1>🏆 CampusPulse Sports</h1>
+
+            <p>
+                Explore Upcoming Sports Events and Competitions
+            </p>
+
+        </div>
+
+    </header>
+    <section class="events-section">
+
+        <div class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search Sports Event">
+
+            <input
+                type="date"
+                id="dateFilter">
+
+            <select id="categoryFilter">
+
+                <option value="all">All Sports</option>
+
+                <option value="Cricket">Cricket</option>
+
+                <option value="Football">Football</option>
+
+                <option value="Volleyball">Volleyball</option>
+
+                <option value="Athletics">Athletics</option>
+
+            </select>
+
+        </div>
+
+        <h2 class="section-title">
+            Upcoming Sports Events
+        </h2>
+        <div class="events-grid">
+
+            <div class="event-card">
+
+                <h3>Inter College Cricket Tournament</h3>
+
+                <p><strong>Category:</strong> Cricket</p>
+
+                <p><strong>Date:</strong> 05 July 2026</p>
+
+                <p><strong>Venue:</strong> Main Ground</p>
+
+                <p>
+                    Compete with teams from affiliated colleges
+                    in an exciting cricket championship.
+                </p>
+
+                <button onclick="openRegisterForm(
+'Inter College Cricket Tournament',
+'Cricket',
+'2026-07-05',
+'Main Ground'
+)">
+    Register
+</button>
+
+            </div>
+
+            <div class="event-card">
+
+                <h3>Football League Championship</h3>
+
+                <p><strong>Category:</strong> Football</p>
+
+                <p><strong>Date:</strong> 10 July 2026</p>
+
+                <p><strong>Venue:</strong> Sports Arena</p>
+
+                <p>
+                    Showcase teamwork and football skills
+                    in the annual league competition.
+                </p>
+
+                <button onclick="openRegisterForm(
+'Football League Championship',
+'Football',
+'2026-07-10',
+'Sports Arena'
+)">
+    Register
+</button>
+
+            </div>
+
+            <div class="event-card">
+
+                <h3>Volleyball Tournament</h3>
+
+                <p><strong>Category:</strong> Volleyball</p>
+
+                <p><strong>Date:</strong> 15 July 2026</p>
+
+                <p><strong>Venue:</strong> Indoor Stadium</p>
+
+                <p>
+                    Participate in an inter-college volleyball
+                    championship and win exciting prizes.
+                </p>
+
+                <button onclick="openRegisterForm(
+'Volleyball Tournament',
+'Volleyball',
+'2026-07-15',
+'Indoor Stadium'
+)">
+    Register
+</button>
+
+            </div>
+
+            <div class="event-card">
+
+                <h3>Track & Field Meet</h3>
+
+                <p><strong>Category:</strong> Athletics</p>
+
+                <p><strong>Date:</strong> 20 July 2026</p>
+
+                <p><strong>Venue:</strong> Athletic Track</p>
+
+                <p>
+                    Running, jumping and throwing events
+                    for talented student athletes.
+                </p>
+
+                <button onclick="openRegisterForm(
+'Track & Field Meet',
+'Athletics',
+'2026-07-20',
+'Athletic Track'
+)">
+    Register
+</button>
+
+            </div>
+
+            <div class="event-card">
+
+                <h3>Basketball Championship</h3>
+
+                <p><strong>Category:</strong> Basketball</p>
+
+                <p><strong>Date:</strong> 25 July 2026</p>
+
+                <p><strong>Venue:</strong> Basketball Court</p>
+
+                <p>
+                    Inter-college basketball tournament
+                    featuring top student teams.
+                </p>
+
+                <button onclick="openRegisterForm(
+'Basketball Championship',
+'Basketball',
+'2026-07-25',
+'Basketball Court'
+)">
+    Register
+</button>
+
+            </div>
+
+            <div class="event-card">
+
+                <h3>Badminton Open</h3>
+
+                <p><strong>Category:</strong> Indoor Sports</p>
+
+                <p><strong>Date:</strong> 30 July 2026</p>
+
+                <p><strong>Venue:</strong> Indoor Sports Complex</p>
+
+                <p>
+                    Singles and doubles badminton matches
+                    for all participating colleges.
+                </p>
+
+                <button onclick="openRegisterForm(
+'Badminton Open',
+'Indoor Sports',
+'2026-07-30',
+'Indoor Sports Complex'
+)">
+    Register
+</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+<div id="registerPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span id="closeRegisterBtn">&times;</span>
+
+        <h2>Event Registration</h2>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                placeholder="Enter Your Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Enter Your Email"
+                required>
+
+            <input
+                type="text"
+                placeholder="Department"
+                required>
+
+            <button type="submit">
+                Submit Registration
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<footer class="event-footer">
+
+    <div class="footer-content">
+
+        <p>
+            © 2026 CampusPulse | Sports Portal
+        </p>
+
+        <a href="home.html">
+
+            <button class="home-btn">
+                ⬅ Back to Home
+            </button>
+
+        </a>
+
+    </div>
+
+</footer>
+
+<script src="sports.js"></script>
+<div class="page-navigation">
+
+    <a href="workshops.html">
+        <button>← Previous</button>
+    </a>
+
+    <a href="about.html">
+        <button>Next →</button>
+    </a>
+
+</div>
+<div id="notification" class="notification"></div>
+</body>
+
+</html>

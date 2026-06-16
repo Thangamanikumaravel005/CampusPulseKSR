@@ -1,0 +1,330 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    min-height:100vh;
+    padding:20px;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.78),
+        rgba(255,255,255,0.78)
+    ),
+    url("campus.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.events-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+.event-header{
+    background:linear-gradient(
+        135deg,
+        #0B1F3A,
+        #1E88E5
+    );
+
+    color:white;
+    text-align:center;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+.event-header h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.event-header p{
+    font-size:1.1rem;
+}
+.about-section{
+    background:rgba(255,255,255,0.92);
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,0.12);
+}
+
+.about-section h2{
+    color:#0B1F3A;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+}
+
+.about-section p{
+    color:#444;
+
+    line-height:1.8;
+
+    text-align:justify;
+}
+
+.about-section ul{
+    padding-left:25px;
+}
+
+.about-section li{
+    color:#444;
+
+    line-height:1.8;
+
+    margin-bottom:10px;
+}
+
+/* FEATURES GRID */
+
+.events-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+.event-card{
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.event-card:hover{
+    transform:translateY(-8px) scale(1.02);
+
+    box-shadow:
+    0 10px 25px rgba(30,136,229,0.25);
+}
+
+.event-card h3{
+    color:#0B1F3A;
+
+    margin-bottom:15px;
+}
+
+.event-card p{
+    text-align:center;
+}
+.event-footer{
+    margin-top:30px;
+
+    background:linear-gradient(
+        135deg,
+        #0B1F3A,
+        #1E88E5
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+.footer-content p{
+    margin-bottom:15px;
+}
+.feedback-btn{
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#FFD700;
+
+    color:#0B1F3A;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    margin-bottom:15px;
+}
+
+.feedback-btn:hover{
+    background:#ffcc00;
+
+    transform:translateY(-3px);
+}
+.home-btn{
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    color:#0B1F3A;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.home-btn:hover{
+    background:#f4f4f4;
+
+    transform:translateY(-3px);
+}
+.modal{
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.6);
+
+    z-index:1000;
+}
+
+.modal-content{
+    background:white;
+
+    width:90%;
+    max-width:550px;
+
+    margin:80px auto;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    position:relative;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+.modal-content h2{
+    text-align:center;
+
+    color:#0B1F3A;
+
+    margin-bottom:20px;
+}
+.close-btn{
+    position:absolute;
+
+    top:10px;
+    right:20px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#333;
+}
+
+.close-btn:hover{
+    color:red;
+}
+.feedback-form{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.feedback-form input,
+.feedback-form textarea{
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus{
+    border-color:#1E88E5;
+
+    box-shadow:
+    0 0 8px rgba(30,136,229,0.2);
+}
+
+.feedback-form button{
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0B2D5C;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.feedback-form button:hover{
+    background:#144a92;
+
+    transform:translateY(-2px);
+}
+@media(max-width:768px){
+
+    .event-header h1{
+        font-size:2rem;
+    }
+
+    .about-section{
+        padding:20px;
+    }
+
+    .modal-content{
+        width:95%;
+    }
+}

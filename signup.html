@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPulse - Signup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="welcome-section">
+
+        <div class="brand-section">
+    <img src="logo.png" alt="CampusPulse Logo" class="logo">
+
+    <h1>CampusPulse</h1>
+</div>
+
+        <h2>Join Our Community</h2>
+
+        <p>
+            Create your account and participate in
+            university-wide events and competitions.
+        </p>
+
+    </div>
+
+    <div class="form-section">
+
+        <form id="signupForm" class="form-card">
+
+            <h2>Create Account</h2>
+
+            <input
+                type="text"
+                id="userName"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="text"
+                id="collegeName"
+                placeholder="College Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="signupPassword"
+                    placeholder="Password"
+                    required>
+
+                <span
+                    onclick="togglePassword('signupPassword')">
+
+                    👁️
+
+                </span>
+
+            </div>
+
+            <button type="submit">
+
+                Sign Up
+
+            </button>
+
+            <p>
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="signup.js"></script>
+
+</body>
+</html>
+

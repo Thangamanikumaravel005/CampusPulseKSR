@@ -1,0 +1,265 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    min-height:100vh;
+    padding:20px;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.78),
+        rgba(255,255,255,0.78)
+    ),
+    url("campus.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    width:90%;
+    max-width:1100px;
+
+    display:flex;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.15);
+
+    animation:fadeIn 1s ease;
+}
+.welcome-section{
+    flex:1;
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    color:#0B1F3A;
+}
+
+.logo{
+    width:180px;
+    height:auto;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+.welcome-section h1{
+    font-size:3.2rem;
+    margin-bottom:15px;
+}
+
+.welcome-section h2{
+    color:#1E88E5;
+    font-size:1.8rem;
+    margin-bottom:25px;
+}
+
+.welcome-section p{
+    max-width:450px;
+    line-height:1.8;
+    font-size:18px;
+    color:#333;
+}
+.form-section{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.form-card{
+    width:100%;
+    max-width:430px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.9);
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+
+    display:flex;
+    flex-direction:column;
+}
+
+.form-card h2{
+    text-align:center;
+    color:#0B1F3A;
+    margin-bottom:25px;
+}
+
+.form-card input{
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:1px solid #dcdcdc;
+    border-radius:10px;
+
+    outline:none;
+
+    background:#f9f9f9;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+.form-card input:focus{
+    border-color:#1E88E5;
+    box-shadow:0 0 8px rgba(30,136,229,0.2);
+}
+
+.password-box{
+    position:relative;
+    width:100%;
+}
+
+.password-box span{
+    position:absolute;
+    top:14px;
+    right:15px;
+
+    cursor:pointer;
+    font-size:18px;
+}
+.form-card button{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#0B2D5C;
+
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+.form-card button:hover{
+    background:#144a92;
+    transform:translateY(-2px);
+}
+.form-card p{
+    margin-top:20px;
+    text-align:center;
+    color:#444;
+}
+
+.form-card a{
+    color:#1E88E5;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.form-card a:hover{
+    text-decoration:underline;
+}
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .welcome-section{
+        text-align:center;
+        align-items:center;
+        padding:40px 25px;
+    }
+
+    .logo{
+        width:140px;
+    }
+
+    .welcome-section h1{
+        font-size:2.3rem;
+    }
+
+    .welcome-section h2{
+        font-size:1.5rem;
+    }
+
+    .welcome-section p{
+        font-size:16px;
+    }
+
+    .form-section{
+        padding:25px;
+    }
+
+    .form-card{
+        padding:30px;
+    }
+}
+#message{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:15px;
+    min-height:20px;
+}
+.notification{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#28a745;
+    color:white;
+    padding:15px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    display:none;
+    z-index:9999;
+    animation:slideIn 0.3s ease;
+}
+
+@keyframes slideIn{
+    from{
+        opacity:0;
+        transform:translateX(100%);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
